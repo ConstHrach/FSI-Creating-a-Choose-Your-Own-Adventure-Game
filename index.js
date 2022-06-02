@@ -1,4 +1,4 @@
-let firstAnswer = window.prompt('Do you head left or right?') //1
+let firstAnswer = window.prompt('Do you head left, right or straight?') //1
 if (firstAnswer === 'left') { //left
     let secondAnswer = window.prompt(`You come across a stray cat. 
 It scampers off down a small hole, just large enough for you to crawl through. 
@@ -35,6 +35,23 @@ lead you away from the dragon altogether. Which path do you take?`)
             let fourthAnswer = window.alert(`You draw the flower, capturing only a fraction of its beauty with your quill. You bring the drawing home, somewhat disappointed, but over time, discover joy in sharing it with your friends and family, recounting the story of your days as a sorcerer with the aid of the sketch.`)
         } else if (thirdAnswer === 'pick') { //righy away from the dragon + pick it
             let fourthAnswer = window.alert(`You pick the flower and bring it home, and all marvel at its brilliance. However, over time it fades and eventually crumbles to dust.`)
+        }
+    }
+} else if (firstAnswer === 'straight') { //straight
+    let secondAnswer = window.prompt(`You come across a lake with a small island in the middle of it. Do you choose to swim to it or use the boat?`)
+    if (secondAnswer === 'swim') { //straight + swim
+        let thirdAnswer = window.prompt(`As you swim across you see a school of fish swimming towards, going away from the island. Do you continue swimming towards the island or follow the fish?`)
+        if (thirdAnswer === 'island') { // straight + swim + keep going towards the island
+            let fourthAnswer = window.alert(`Because you ignored the obvious sign that the school of fish were fleeing from danger, you end up getting swallowed the loch ness monster :(`)
+        } else if (thirdAnswer === 'go with the fish') { //straight + swim + follow the fish away from the island
+            let fourthAnswer = window.alert(`You followed the school of fish away from the island. They congratulate you on following the obvious signs of danger and give you a seashell signed by Nemo!`)
+        }
+    } else if (secondAnswer === 'boat') { //straight + use the boat
+        let thirdAnswer = window.prompt(`You get on your boat and paddle towards the island, when you look inside you see a fishing rod. You gaze at the fishing rod and wonder if you should stop and start fishing or venture on to the island.`)
+        if (thirdAnswer === 'go fishing') { //straight + use the boat + use the fishing rod to go fishing
+            let fourthAnswer = window.alert(`You sit in your boat with your rod casted for hours, the sun is setting and you haven't even gotten a nibble. You decide it's late and that you should head home.`)
+        } else if (thirdAnswer === 'venture') { //straight + use the boat + venture towards the island
+            let fourthAnswer = window.alert(`You get to the island after paddling for about ten minutes. Once you step off the boat, you nearly step on a hedgehog stranded on the island with no way back. You decide to take it home and give a nice and loving home. You name it "Sonic".`)
         }
     }
 }
